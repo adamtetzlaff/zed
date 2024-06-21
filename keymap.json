@@ -1,0 +1,52 @@
+[
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal and visual mode
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePrevItem",
+      "g l": "vim::EndOfLine",
+      "g h": "vim::FirstNonWhitespace",
+      "space f f": "file_finder::Toggle",
+      "space x": "pane::CloseActiveItem",
+      "shift-k": "editor::Hover",
+      "space s v": "pane::SplitRight",
+      "space s h": "pane::SplitDown",
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "space c a": "editor::ToggleCodeActions",
+      "space r a": "editor::Rename",
+      "space t t": "diagnostics::Deploy"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in insert mode
+      "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-j": ["workspace::AcitvatePaneInDirection", "Down"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"]
+    }
+  }
+]

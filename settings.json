@@ -1,0 +1,95 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "buffer_font_size": 13,
+  "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  "ui_font_size": 14,
+  "ui_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  "theme": "Rosé Pine Moon",
+  "projects_online_by_default": false,
+  "vim_mode": true,
+  "cursor_blink": false,
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "lsp": {
+    "typescript-language-server": {
+      "initialization_options": {
+        "checkOnSave": {
+          "command": "eslint_d",
+          "arguments": [
+            "--stdin",
+            "--stdin-filename",
+            "{buffer_path}",
+            "--fix-to-stdout"
+          ]
+        }
+      }
+    }
+  },
+  "languages": {
+    "JSON": {
+      "format_on_save": "off"
+    },
+    "TypeScript": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "eslint_d",
+          "arguments": [
+            "--config",
+            ".eslintrc.json",
+            "--stdin",
+            "--stdin-filename",
+            "{buffer_path}",
+            "--fix-to-stdout"
+          ]
+        }
+      }
+    },
+    "JavaScript": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "eslint_d",
+          "arguments": [
+            "--config",
+            ".eslintrc.json",
+            "--stdin",
+            "--stdin-filename",
+            "{buffer_path}",
+            "--fix-to-stdout"
+          ]
+        }
+      }
+    },
+    "TSX": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "eslint_d",
+          "arguments": [
+            "--config",
+            ".eslintrc.json",
+            "--stdin",
+            "--stdin-filename",
+            "{buffer_path}",
+            "--fix-to-stdout"
+          ]
+        }
+      }
+    },
+  }
+}
