@@ -7,15 +7,18 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "icon_theme": "Catppuccin Frappé",
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
-  "buffer_font_size": 13,
+  "buffer_font_size": 14,
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
+  // "buffer_font_family": "IosevkaCustom Nerd Font",
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMonoNL Nerd Font Mono",
-  "theme": "Rosé Pine Moon",
+  // "ui_font_family": "IosevkaCustom Nerd Font",
+  "theme": "Xcode Classic Dark",
   "projects_online_by_default": false,
   "vim_mode": true,
   "cursor_blink": false,
@@ -24,72 +27,34 @@
       "enabled": false
     }
   },
+  "formatter": {
+    "language_server": {
+      "name": "biome"
+    }
+  },
+  "code_actions_on_format": {
+    "source.fixAll.biome": true,
+    "source.organizeImports.biome": true
+  },
   "lsp": {
-    "typescript-language-server": {
-      "initialization_options": {
-        "checkOnSave": {
-          "command": "eslint_d",
-          "arguments": [
-            "--stdin",
-            "--stdin-filename",
-            "{buffer_path}",
-            "--fix-to-stdout"
-          ]
-        }
+    "biome": {
+      "settings": {
+        "require_config_file": true
       }
     }
   },
   "languages": {
     "JSON": {
-      "format_on_save": "off"
+      "format_on_save": "on"
     },
     "TypeScript": {
-      "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "eslint_d",
-          "arguments": [
-            "--config",
-            ".eslintrc.json",
-            "--stdin",
-            "--stdin-filename",
-            "{buffer_path}",
-            "--fix-to-stdout"
-          ]
-        }
-      }
+      "format_on_save": "on"
     },
     "JavaScript": {
-      "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "eslint_d",
-          "arguments": [
-            "--config",
-            ".eslintrc.json",
-            "--stdin",
-            "--stdin-filename",
-            "{buffer_path}",
-            "--fix-to-stdout"
-          ]
-        }
-      }
+      "format_on_save": "on"
     },
     "TSX": {
-      "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "eslint_d",
-          "arguments": [
-            "--config",
-            ".eslintrc.json",
-            "--stdin",
-            "--stdin-filename",
-            "{buffer_path}",
-            "--fix-to-stdout"
-          ]
-        }
-      }
-    },
+      "format_on_save": "on"
+    }
   }
 }
