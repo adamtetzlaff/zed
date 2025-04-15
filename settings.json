@@ -15,6 +15,9 @@
   "buffer_font_size": 14,
   "buffer_font_family": "JetBrainsMonoNL Nerd Font Mono",
   // "buffer_font_family": "IosevkaCustom Nerd Font",
+  "buffer_line_height": {
+    "custom": 2
+  },
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMonoNL Nerd Font Mono",
   // "ui_font_family": "IosevkaCustom Nerd Font",
