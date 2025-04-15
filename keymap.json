@@ -10,7 +10,7 @@
     "bindings": {
       // put key-bindings here if you want them to work only in normal mode
       "tab": "pane::ActivateNextItem",
-      "shift-tab": "pane::ActivatePrevItem",
+      "shift-tab": "pane::ActivatePreviousItem",
       "g l": "vim::EndOfLine",
       "g h": "vim::FirstNonWhitespace",
       "space f f": "file_finder::Toggle",
@@ -18,10 +18,10 @@
       "shift-k": "editor::Hover",
       "space s v": "pane::SplitRight",
       "space s h": "pane::SplitDown",
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
       "space c a": "editor::ToggleCodeActions",
       "space r a": "editor::Rename",
       "space t t": "diagnostics::Deploy"
@@ -43,10 +43,10 @@
   {
     "context": "Dock",
     "bindings": {
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-j": ["workspace::AcitvatePaneInDirection", "Down"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"]
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp"
     }
   }
 ]
